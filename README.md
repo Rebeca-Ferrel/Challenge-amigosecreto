@@ -15,3 +15,5 @@ Este proyecto desarrollado con Alura Latam, permite agregar nombres a una lista 
 ➛ HTML y CSS: Proporcionados por Alura Latam para la estructura y el diseño. <br> 
 
 ![alt text](./assets/gif-amigosecreto.gif)
+
+https://rebeca-ferrel.github.io/Challenge-amigosecreto/
