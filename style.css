@@ -136,7 +136,7 @@ ul {
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: #4B69FD;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
@@ -159,4 +159,15 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+.ganador {
+    font-size: 20px; 
+    font-weight: bold;
+    color: #ff5722;
+    border: 2px solid #4B69FD; 
+    padding: 5px 10px; 
+    display: inline-block; 
+    background-color: transparent; 
+    border-radius: 10px;
 }

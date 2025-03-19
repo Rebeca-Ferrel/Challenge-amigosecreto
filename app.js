@@ -42,24 +42,36 @@ function quitarAmigo(nombre) {
     mostrarLista()
 }
 
-function sortearAmigo (){
-    if (amiguis.length === 0){
-        alert("No hay nombres en la lista para sortear")
-        return
-    }
-
-    if (amiguis.length === 1) {
-        alert("Debe haber al menos dos nombres en la lista para sortear")
+function sortearAmigo() {
+    if (amiguis.length === 0) {
+        alert("No hay nombres en la lista para sortear, ingrese al menos dos nombres");
         return;
     }
 
-    let indiceAleatorio = Math.floor(Math.random() * amiguis.length)
-    let ganador = amiguis[indiceAleatorio]
+    if (amiguis.length === 1) {
+        alert("Debe haber al menos dos nombres en la lista para sortear");
+        return;
+    }
 
-    document.getElementById("resultado").innerHTML = `El amigo sorteado es: <strong>${ganador}</strong>`
+    let indiceAleatorio = Math.floor(Math.random() * amiguis.length);
+    let ganador = amiguis[indiceAleatorio];
 
-    document.getElementById("listaAmigos").innerHTML = ""
-    amiguis = []
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `El amigo sorteado es: <span class="ganador">${ganador}</span>`;
+
+    let spanGanador = document.querySelector(".ganador");
+
+    let intervalo = setInterval(() => {
+        spanGanador.style.opacity = spanGanador.style.opacity === "1" ? "0" : "1";
+    }, 300);
+
+    setTimeout(() => {
+        clearInterval(intervalo);
+        spanGanador.style.opacity = "1"; 
+    }, 3000);
+
+    document.getElementById("listaAmigos").innerHTML = "";
+    amiguis = [];
 }
 
 document.getElementById("amigo").addEventListener("keypress", function(event) {
